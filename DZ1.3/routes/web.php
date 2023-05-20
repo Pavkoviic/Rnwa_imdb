@@ -3,6 +3,9 @@ use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ActorsController;
 use App\Http\Controllers\CastController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SearchController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +22,6 @@ use Illuminate\Support\Facades\Route;
 Route::resource('movies', MovieController::class);
 Route::resource('actors',ActorsController::class);
 Route::resource('cast',CastController::class);
+
+Route::get('/search', [SearchController::class, 'search'])->name('search');
+

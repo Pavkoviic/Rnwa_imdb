@@ -27,11 +27,23 @@
                 </div>
             </div>
         </div>
+        
         @if ($message = Session::get('success'))
             <div class="alert alert-success">
                 <p>{{ $message }}</p>
             </div>
         @endif
+
+        <form method="GET" >
+            <div class="pull-left">
+                <input type="text" name="query" class="form-control form-control-lg" style="height: 50px;" placeholder="Search..." />
+            </div>
+            <div class="pull-right mb-2 mt-2">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+
+
         <table class="table table-bordered">
             <thead>
                 <tr>
