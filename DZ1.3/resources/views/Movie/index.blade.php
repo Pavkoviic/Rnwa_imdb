@@ -15,6 +15,7 @@
 			<li><a href="{{ route('cast.index') }}">Cast</a></li>
 		</ul>
 	</div>
+    
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12 margin-tb">
@@ -33,11 +34,8 @@
         @endif
 
         <form method="GET" action="{{ route('search') }}">
-            <div class="pull-left">
-                <input type="text" name="query" class="form-control form-control-lg" style="height: 50px;" placeholder="Search..." />
-            </div>
-            <div class="pull-right mb-2 mt-2">
-                <button type="submit" class="btn btn-primary">Search</button>
+            <div class="pull-left mb-2">
+                <input type="text" name="search" id="search" class="form-control form-control-lg" style="height: 50px;" placeholder="Search..." />
             </div>
         </form>
 
@@ -77,5 +75,7 @@
             </tbody>
         </table>
     </div>
+
+
 </body>
 </html>

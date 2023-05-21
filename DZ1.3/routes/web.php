@@ -4,6 +4,7 @@ use App\Http\Controllers\ActorsController;
 use App\Http\Controllers\CastController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\LiveSearchController;
 
 
 
@@ -19,9 +20,14 @@ use App\Http\Controllers\SearchController;
 */
 
 
+Route::get('/', [LiveSearchController::class, 'index']);
+Route::get('/action', [LiveSearchController::class, 'action'])->name('action');
+
 Route::resource('movies', MovieController::class);
 Route::resource('actors',ActorsController::class);
 Route::resource('cast',CastController::class);
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
+
+
 
